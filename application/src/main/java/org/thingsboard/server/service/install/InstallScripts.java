@@ -64,7 +64,7 @@ public class InstallScripts {
 
     public static final String JSON_EXT = ".json";
 
-    @Value("${install.data_dir:}")
+    @Value("${install.data_dir:data}")
     private String dataDir;
 
     @Autowired

@@ -15,10 +15,22 @@
  */
 package org.thingsboard.server.common.data.query;
 
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-@Data
+import lombok.Getter;
+
 public class EntityKey {
+
+    @Getter
     private final EntityKeyType type;
+    @Getter
     private final String key;
+
+    @JsonCreator
+    public EntityKey(@JsonProperty("type") EntityKeyType type, @JsonProperty("key") String key) {
+        super();
+        this.type = type;
+        this.key = key;
+    }
 }

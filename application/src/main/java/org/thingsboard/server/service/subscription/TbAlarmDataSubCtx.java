@@ -60,10 +60,8 @@ public class TbAlarmDataSubCtx extends TbAbstractDataSubCtx<AlarmDataQuery> {
 
     private final AlarmService alarmService;
     @Getter
-    @Setter
     private final LinkedHashMap<EntityId, EntityData> entitiesMap;
     @Getter
-    @Setter
     private final HashMap<AlarmId, AlarmData> alarmsMap;
 
     private final int maxEntitiesPerAlarmSubscription;
