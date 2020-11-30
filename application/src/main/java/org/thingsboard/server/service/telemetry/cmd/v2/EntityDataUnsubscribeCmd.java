@@ -15,19 +15,11 @@
  */
 package org.thingsboard.server.service.telemetry.cmd.v2;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
-import lombok.Getter;
-
+@Data
 public class EntityDataUnsubscribeCmd implements UnsubscribeCmd {
 
-    @Getter
     private final int cmdId;
 
-    @JsonCreator
-    public EntityDataUnsubscribeCmd(@JsonProperty("cmdId") int cmdId) {
-        super();
-        this.cmdId = cmdId;
-    }
 }
